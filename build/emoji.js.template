@@ -356,7 +356,7 @@
 		// deal with simple modes (colons and text) first
 		wrapper = wrapper || '';
 		if (self.colons_mode) return ':'+self.data[idx][3][0]+':'+extra;
-		if (self.unicode_mode) return idx + extra;
+		if (self.unicode_mode) return self.data[idx][0][0] + extra;
 		var text_name = (actual) ? wrapper+actual+wrapper : self.data[idx][8] || wrapper+self.data[idx][3][0]+wrapper;
 		if (self.text_mode) return text_name + extra;
 
